@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ConnorAPI.Controllers.NightbotController",
+    "Method": "GetResponse",
+    "RelativePath": "api/Nightbot/{input}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
