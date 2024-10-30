@@ -1,17 +1,17 @@
-# Use the latest .NET SDK image
-FROM mcr.microsoft.com/dotnet/sdk:8.0.400 AS build
-WORKDIR /app
+# Stage 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
-# Copy csproj and restore as distinct layers to improve caching
-COPY *.csproj ./
+# Copy the project file and restore dependencies as a separate layer
+COPY ["ConnorAPI.csproj", "./"]
 RUN dotnet restore --packages /root/.nuget/packages
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out --no-restore --packages /root/.nuget/packages
+# Copy the rest of the application code and build the app
+COPY . .
+RUN dotnet publish -c Release -o /app --no-restore --packages /root/.nuget/packages
 
-# Use runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+# Stage 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/out ./
+COPY --from=build /app .
 ENTRYPOINT ["dotnet", "ConnorAPI.dll"]
