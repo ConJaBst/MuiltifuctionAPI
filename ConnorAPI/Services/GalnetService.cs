@@ -34,10 +34,8 @@ namespace ConnorAPI.Services
             Console.WriteLine($"lastId: {idCounter}");
             int HtmlCounter = 0;
             int ArticleCounter = 0;
-            int MaxHtmlCounter = 6;
-            int MaxArticleCounter = 5;
 
-            while (startDate < new DateTime(3301, 2, 2))
+            while (true)
             {
                 Thread.Sleep(1000);
                 // Makes the URL look like "https://community.elitedangerous.com/galnet/dd-MMM-yyyy"
