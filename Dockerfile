@@ -2,15 +2,14 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
-# Copy .csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+# Copy the .csproj file and restore dependencies
+# Replace 'ConnorAPI' with your project folder name
+COPY ConnorAPI/*.csproj ./ConnorAPI/
+RUN dotnet restore "ConnorAPI/ConnorAPI.csproj"
 
-# Copy the rest of the application code
+# Copy the entire project and build it
 COPY . ./
-
-# Build and publish the app in Release mode to the out folder
-RUN dotnet publish -c Release -o /app/out
+RUN dotnet publish "ConnorAPI/ConnorAPI.csproj" -c Release -o /app/out
 
 # Use a lightweight .NET 8 runtime image for the final stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
@@ -19,7 +18,7 @@ WORKDIR /app
 # Copy the published output from the build environment
 COPY --from=build-env /app/out .
 
-# Expose port 8000 (adjust if Railway uses a different port)
+# Expose port 8000
 EXPOSE 8000
 
 # Define the entry point for the application
