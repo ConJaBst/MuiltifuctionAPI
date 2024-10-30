@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z1YHQNdVo8aYTji3K6CUwQqjiIiqYIcmo+nj2uUiefg=",
+  "Hash": "8Y+73a3P9a0j3lhws+BeadCActH4aMznz6ASELYrFgs=",
   "Source": "ConnorAPI",
   "BasePath": "_content/ConnorAPI",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\jpg\\Background.jpg",
+      "SourceId": "ConnorAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\",
+      "BasePath": "_content/ConnorAPI",
+      "RelativePath": "jpg/Background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\jpg\\Background.jpg"
     },
     {
       "Identity": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\js\\site.js",

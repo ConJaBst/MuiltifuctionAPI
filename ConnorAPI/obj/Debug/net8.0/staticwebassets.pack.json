@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\jpg\\Background.jpg",
+      "PackagePath": "staticwebassets\\jpg\\Background.jpg"
+    },
+    {
       "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -3,4 +3,26 @@
 }
 
 <h1>Galnet Articles</h1>
-<a asp-action="Update" class="btn btn-primary">Update Articles</a>
+<a asp-action="Update" class="btn btn-primary mb-3">Update Articles</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]">Id</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["TitleSortParam"]">Title</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]">Date</a></th>
+            <th>View Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>@article.Id</td>
+                <td>@article.Title</td>
+                <td>@article.Date.ToString("dd MMM yyyy")</td>
+                <td><a asp-action="ViewContent" asp-route-id="@article.Id" class="btn btn-info">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
