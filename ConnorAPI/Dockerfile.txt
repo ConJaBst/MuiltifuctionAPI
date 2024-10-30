@@ -2,13 +2,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy the project file and restore dependencies as a separate layer
+# Copy project files and restore dependencies
 COPY ["ConnorAPI.csproj", "./"]
-RUN dotnet restore --packages /root/.nuget/packages
+RUN dotnet restore --packages /root/.nuget/packages || { echo 'Restore failed'; exit 1; }
 
-# Copy the rest of the application code and build the app
+# Copy the rest of the app code and publish with diagnostic output
 COPY . .
-RUN dotnet publish -c Release -o /app --no-restore --packages /root/.nuget/packages
+RUN dotnet publish -c Release -o /app --no-restore --packages /root/.nuget/packages || { echo 'Publish failed'; exit 1; }
 
 # Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
