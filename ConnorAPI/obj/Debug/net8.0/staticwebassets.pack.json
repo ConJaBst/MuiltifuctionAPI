@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\json\\galnetArticles.json",
+      "PackagePath": "staticwebassets\\json\\galnetArticles.json"
+    },
+    {
       "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

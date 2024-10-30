@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jdgwy0K+NA87keFMt/IM8y+w/0fXoteAUj9KQzNSuFM=",
+  "Hash": "Z1YHQNdVo8aYTji3K6CUwQqjiIiqYIcmo+nj2uUiefg=",
   "Source": "ConnorAPI",
   "BasePath": "_content/ConnorAPI",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\json\\galnetArticles.json",
+      "SourceId": "ConnorAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\",
+      "BasePath": "_content/ConnorAPI",
+      "RelativePath": "json/galnetArticles.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\json\\galnetArticles.json"
     },
     {
       "Identity": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\ConnorAPI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
