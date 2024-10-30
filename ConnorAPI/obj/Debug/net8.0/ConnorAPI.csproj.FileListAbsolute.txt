@@ -28,3 +28,4 @@ C:\Users\Connor\source\repos\ConnorAPI\ConnorAPI\obj\Debug\net8.0\refint\ConnorA
 C:\Users\Connor\source\repos\ConnorAPI\ConnorAPI\obj\Debug\net8.0\ConnorAPI.pdb
 C:\Users\Connor\source\repos\ConnorAPI\ConnorAPI\obj\Debug\net8.0\ConnorAPI.genruntimeconfig.cache
 C:\Users\Connor\source\repos\ConnorAPI\ConnorAPI\obj\Debug\net8.0\ref\ConnorAPI.dll
+C:\Users\Connor\source\repos\ConnorAPI\ConnorAPI\obj\Debug\net8.0\ConnorAPI.sourcelink.json
