@@ -32,12 +32,12 @@ namespace ConnorAPI.Services
             Console.WriteLine($"startDate: {startDate}");
             int idCounter = (lastId ?? 0) + 1; // Start ID after the last saved ID
             Console.WriteLine($"lastId: {idCounter}");
+            DateTime endDate = DateTime.Now.AddYears(1_286);
             int HtmlCounter = 0;
             int ArticleCounter = 0;
 
-            while (true)
+            while (startDate < endDate)
             {
-                Thread.Sleep(1000);
                 // Makes the URL look like "https://community.elitedangerous.com/galnet/dd-MMM-yyyy"
                 var formattedDate = startDate.ToString("dd-MMM-yyyy").ToUpper();
                 string url = $"{baseUrl}{formattedDate}";
@@ -58,22 +58,21 @@ namespace ConnorAPI.Services
                 Console.WriteLine($"\nFound {articleNodes.Count} at {formattedDate}");
                 foreach (var articleNode in articleNodes)
                 {
-                    var titleNode = articleNode.SelectSingleNode(".//h3[@class='hilite galnetNewsArticleTitle']");
+                    var titleNode = articleNode.SelectSingleNode(".//h3");
                     var contentNode = articleNode.SelectNodes(".//p")?.Skip(1).FirstOrDefault();
 
+                    // Get title if available, otherwise fallback to first line of content
                     string title = titleNode?.InnerText?.Trim();
                     string content = contentNode?.InnerText?.Trim();
 
-                    // Use the first line of content as the title if the title is missing
-                    if (string.IsNullOrEmpty(title))
-                    {
-                        // Assuming the first line of the content serves as a title if title is missing
-                        title = content.Split('\n').FirstOrDefault()?.Trim();
-                    }
+                    Console.WriteLine(title);
+                    
 
-                    // If the content starts with the title, remove the title from content
-                    if (!string.IsNullOrEmpty(content) && content.StartsWith(title))
+                    // Only use the first line of content as the title if titleNode is null
+                    if (string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(content))
                     {
+                        title = content.Split('\n').FirstOrDefault()?.Trim();
+                        // Remove the title line from content if it was used as a fallback
                         content = content.Substring(title.Length).TrimStart();
                     }
 
