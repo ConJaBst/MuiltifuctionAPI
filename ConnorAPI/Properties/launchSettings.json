@@ -14,7 +14,6 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "GITHUB_TOKEN": "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"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7292;http://localhost:5198"
