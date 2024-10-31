@@ -124,11 +124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Connor\\Source\\Repos\\MuiltifuctionAPI\\ConnorAPI\\ConnorAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\ConnorAPI.csproj",
       "projectName": "ConnorAPI",
-      "projectPath": "C:\\Users\\Connor\\Source\\Repos\\MuiltifuctionAPI\\ConnorAPI\\ConnorAPI.csproj",
+      "projectPath": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\ConnorAPI.csproj",
       "packagesPath": "C:\\Users\\Connor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Connor\\Source\\Repos\\MuiltifuctionAPI\\ConnorAPI\\obj\\",
+      "outputPath": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
