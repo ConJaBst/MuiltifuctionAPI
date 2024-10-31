@@ -22,6 +22,9 @@ namespace ConnorAPI.Controllers
         {
             var articles = await _galnetService.LoadArticlesFromJsonAsync();
 
+            var gitHubService = new GithubService();
+            await gitHubService.BackupJsonToFileAsync("wwwroot/json/galnetArticles.json");
+
             // Default sorting by ID descending
             articles = sortOrder switch
             {
@@ -52,10 +55,5 @@ namespace ConnorAPI.Controllers
 
             return View(article); // Pass only a single article, not a list
         }
-
-
-
-
-
     }
 }
