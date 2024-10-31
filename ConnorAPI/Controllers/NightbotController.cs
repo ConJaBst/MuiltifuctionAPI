@@ -16,7 +16,7 @@ namespace ConnorAPI.Controllers
             else if (input.Equals("2"))
                 return Ok(SayBye());
             else if (input.Equals("Backup"))
-                return Ok();
+                return Ok(UpdateJSONAsync());
             else
                 return BadRequest("Invalid input");
         }
