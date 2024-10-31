@@ -52,10 +52,5 @@ namespace ConnorAPI.Controllers
 
             return View(article); // Pass only a single article, not a list
         }
-
-
-
-
-
     }
 }
