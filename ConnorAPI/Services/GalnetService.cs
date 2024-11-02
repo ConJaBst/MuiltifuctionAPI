@@ -16,7 +16,7 @@ namespace ConnorAPI.Services
 
 
 
-       
+
 
         public async Task<List<GalnetArticle>> FetchArticlesUntilLatestAsync()
         {
@@ -66,7 +66,7 @@ namespace ConnorAPI.Services
                     string content = contentNode?.InnerText?.Trim();
 
                     Console.WriteLine(title);
-                    
+
 
                     // Only use the first line of content as the title if titleNode is null
                     if (string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(content))
@@ -137,6 +137,8 @@ namespace ConnorAPI.Services
                 };
 
                 await File.WriteAllTextAsync(_jsonFilePath, JsonSerializer.Serialize(existingArticles, options));
+
+                
             }
         }
 

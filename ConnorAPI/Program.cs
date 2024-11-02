@@ -5,7 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Dependency injection.
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<GalnetService>();
-builder.Services.AddHostedService<TimerService>();
 
 var app = builder.Build();
 

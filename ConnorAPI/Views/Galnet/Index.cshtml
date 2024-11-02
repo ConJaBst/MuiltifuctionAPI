@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Galnet Articles";
+    var isLocal = Context.Connection.RemoteIpAddress?.ToString() == "127.0.0.1" || Context.Connection.RemoteIpAddress?.ToString() == "::1";
 }
 
 <!DOCTYPE html>
@@ -7,13 +8,15 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/GalnetIndexStyle.css">
-
 </head>
 <body>
     <div class="content-container">
         <h1>Galnet Articles</h1>
         <div class="centered">
-            <a asp-action="Update" class="btn btn-primary mb-3">Update Articles</a>
+            @if (isLocal)
+            {
+                <a asp-action="Update" class="btn btn-primary mb-3">Update Articles</a>
+            }
         </div>
 
         <table class="table table-striped">

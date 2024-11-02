@@ -15,6 +15,11 @@ namespace ConnorAPI.Controllers
         public async Task<IActionResult> Update()
         {
             await _galnetService.UpdateJsonAsync();
+
+            Console.WriteLine("Backing up JSON");
+            var gitHubService = new GithubService();
+            await gitHubService.BackupJSONToGitHub("wwwroot/json/galnetArticles.json");
+
             return RedirectToAction("Index");
         }
 
