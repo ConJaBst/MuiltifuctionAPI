@@ -2,37 +2,53 @@
     ViewData["Title"] = "Galnet Articles";
 }
 
-<h1>Galnet Articles</h1>
-<a asp-action="Update" class="btn btn-primary mb-3">Update Articles</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/GalnetIndexStyle.css">
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]">Id</a></th>
-            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["TitleSortParam"]">Title</a></th>
-            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]">Date</a></th>
-            <th>View Content</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var article in Model)
-        {
-            <tr>
-                <td>@article.Id</td>
-                <td>@article.Title</td>
-                <td>@article.Date.ToString("dd MMM yyyy")</td>
-                <td><a asp-action="ViewContent" asp-route-id="@article.Id" class="btn btn-info">View</a></td>
-            </tr>
-        }
-    </tbody>
-</table>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Galnet Articles</h1>
+        <div class="centered">
+            <a asp-action="Update" class="btn btn-primary mb-3">Update Articles</a>
+        </div>
 
-<!-- Load All Button -->
-@if (!(bool)ViewData["LoadAll"])
-{
-    <a asp-action="Index" asp-route-loadAll="true" class="btn btn-secondary mt-3">Load All Articles</a>
-}
-else
-{
-    <a asp-action="Index" asp-route-loadAll="false" class="btn btn-secondary mt-3">Show Less</a>
-}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]">Id</a></th>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["TitleSortParam"]">Title</a></th>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]">Date</a></th>
+                    <th>View Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var article in Model)
+                {
+                    <tr>
+                        <td>@article.Id</td>
+                        <td>@article.Title</td>
+                        <td>@article.Date.ToString("dd MMM yyyy")</td>
+                        <td><a asp-action="ViewContent" asp-route-id="@article.Id" class="btn btn-info">View</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="centered">
+            <!-- Load All Button -->
+            @if (!(bool)ViewData["LoadAll"])
+            {
+                <a asp-action="Index" asp-route-loadAll="true" class="btn btn-secondary mt-3">Load All Articles</a>
+            }
+            else
+            {
+                <a asp-action="Index" asp-route-loadAll="false" class="btn btn-secondary mt-3">Show Less</a>
+            }
+        </div>
+    </div>
+</body>
+</html>

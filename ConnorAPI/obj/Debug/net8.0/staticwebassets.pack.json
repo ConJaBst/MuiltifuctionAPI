@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\ConnorAPI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\css\\GalnetContentStyle.css",
+      "PackagePath": "staticwebassets\\css\\GalnetContentStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\css\\GalnetIndexStyle.css",
+      "PackagePath": "staticwebassets\\css\\GalnetIndexStyle.css"
+    },
+    {
       "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,8 +21,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\jpg\\Background.jpg",
-      "PackagePath": "staticwebassets\\jpg\\Background.jpg"
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\jpg\\ContentBackground.jpg",
+      "PackagePath": "staticwebassets\\jpg\\ContentBackground.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\jpg\\IndexBackground.jpg",
+      "PackagePath": "staticwebassets\\jpg\\IndexBackground.jpg"
     },
     {
       "Id": "C:\\Users\\Connor\\source\\repos\\ConnorAPI\\MuiltifuctionAPI\\ConnorAPI\\wwwroot\\js\\site.js",
