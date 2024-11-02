@@ -26,3 +26,13 @@
         }
     </tbody>
 </table>
+
+<!-- Load All Button -->
+@if (!(bool)ViewData["LoadAll"])
+{
+    <a asp-action="Index" asp-route-loadAll="true" class="btn btn-secondary mt-3">Load All Articles</a>
+}
+else
+{
+    <a asp-action="Index" asp-route-loadAll="false" class="btn btn-secondary mt-3">Show Less</a>
+}

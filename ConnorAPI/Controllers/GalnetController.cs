@@ -18,11 +18,18 @@ namespace ConnorAPI.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder, bool loadAll = false)
         {
             var articles = await _galnetService.LoadArticlesFromJsonAsync();
 
-            // Default sorting by ID descending
+            articles = articles.OrderByDescending(a => a.Id).ToList();
+
+            if (!loadAll)
+            {
+                articles = articles.Take(10).ToList(); // Load only 15
+            }
+
+            // Sorting code
             articles = sortOrder switch
             {
                 "id" => articles.OrderBy(a => a.Id).ToList(),
@@ -30,15 +37,18 @@ namespace ConnorAPI.Controllers
                 "title_desc" => articles.OrderByDescending(a => a.Title).ToList(),
                 "date" => articles.OrderBy(a => a.Date).ToList(),
                 "date_desc" => articles.OrderByDescending(a => a.Date).ToList(),
-                _ => articles.OrderByDescending(a => a.Id).ToList(), // Default to Id descending
+                _ => articles // Keep the default order (by descending Id) if no other sort is specified
             };
 
             ViewData["IdSortParam"] = sortOrder == "id" ? "id_desc" : "id";
             ViewData["TitleSortParam"] = sortOrder == "title" ? "title_desc" : "title";
             ViewData["DateSortParam"] = sortOrder == "date" ? "date_desc" : "date";
+            ViewData["LoadAll"] = loadAll;
 
             return View(articles);
         }
+
+
 
         public async Task<IActionResult> ViewContent(int id)
         {
