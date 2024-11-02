@@ -27,7 +27,7 @@ namespace ConnorAPI.Services
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
         }
 
-        public async Task BackupJsonToFileAsync(string localFilePath)
+        public async Task BackupJSONToGitHub(string localFilePath)
         {
             Console.WriteLine("Attempting Backup");
             try
@@ -57,7 +57,7 @@ namespace ConnorAPI.Services
 
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("File uploaded successfully.");
+                    Console.WriteLine($"Backed up to {url} at {DateTime.Now}");
                 }
                 else
                 {

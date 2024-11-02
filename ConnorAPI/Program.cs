@@ -2,9 +2,10 @@ using ConnorAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Dependency injection.
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<GalnetService>();
+builder.Services.AddHostedService<TimerService>();
 
 var app = builder.Build();
 

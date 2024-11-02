@@ -36,7 +36,7 @@ namespace ConnorAPI.Controllers
         {
             Console.WriteLine("Backing up JSON");
             var gitHubService = new GithubService();
-            await gitHubService.BackupJsonToFileAsync("wwwroot/json/galnetArticles.json");
+            await gitHubService.BackupJSONToGitHub("wwwroot/json/galnetArticles.json");
             return ("Updating Backup");
         }
     }
