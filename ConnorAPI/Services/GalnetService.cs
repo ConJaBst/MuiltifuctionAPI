@@ -142,11 +142,6 @@ namespace ConnorAPI.Services
             }
         }
 
-
-
-
-
-
         public async Task<List<GalnetArticle>> LoadArticlesFromJsonAsync()
         {
             if (!File.Exists(_jsonFilePath) || new FileInfo(_jsonFilePath).Length == 0)

@@ -1,0 +1,65 @@
+﻿@model GalnetArticle
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/GuessrStyle.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="back-button">
+            <a asp-action="Index" class="link-button">Back to Articles</a>
+        </div>
+
+        <!-- Guesser Game Section -->
+        <div class="guesser-container">
+            <h2 class="guesser-title">Guess the Publication Date</h2>
+            <form asp-action="SubmitGuess" method="post">
+                <input type="hidden" name="articleId" value="@Model.Id" />
+                <input type="hidden" name="round" value="@ViewData["Round"]" />
+                <input type="hidden" name="score" value="@ViewData["Score"]" />
+
+                <div class="slider-container">
+                    <label for="yearSlider">Year:</label>
+                    <input type="range" id="yearSlider" name="yearGuess" min="3301" max="3310" value="3301" class="slider" oninput="updateYearOutput(this.value)">
+                    <span id="yearOutput">3301</span>
+                </div>
+
+                <div class="slider-container">
+                    <label for="monthSlider">Month:</label>
+                    <input type="range" id="monthSlider" name="monthGuess" min="1" max="12" value="1" class="slider" oninput="updateMonthOutput(this.value)">
+                    <span id="monthOutput">1</span>
+                </div>
+
+                <div class="slider-container">
+                    <label for="daySlider">Day:</label>
+                    <input type="range" id="daySlider" name="dayGuess" min="1" max="31" value="1" class="slider" oninput="updateDayOutput(this.value)">
+                    <span id="dayOutput">1</span>
+                </div>
+
+                <button type="submit" class="guess-button">Submit Guess</button>
+            </form>
+        </div>
+
+        <!-- Article Details -->
+        <h1 class="article-title">@Model.Title</h1>
+        <div class="article-content">@Html.Raw(Model.Content.Replace("\n", "<br><br>"))</div>
+    </div>
+
+    <script>
+        function updateYearOutput(value) {
+            document.getElementById("yearOutput").textContent = value;
+        }
+
+        function updateMonthOutput(value) {
+            document.getElementById("monthOutput").textContent = value;
+        }
+
+        function updateDayOutput(value) {
+            document.getElementById("dayOutput").textContent = value;
+        }
+    </script>
+</body>
+</html>
