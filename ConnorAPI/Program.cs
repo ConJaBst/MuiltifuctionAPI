@@ -5,7 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Dependency injection.
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<GalnetService>();
-builder.Services.AddScoped<IGuesserScoreService, GuesserScoreService>();
 
 builder.Services.AddSession(options =>
 {

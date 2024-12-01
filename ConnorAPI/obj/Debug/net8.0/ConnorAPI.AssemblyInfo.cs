@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConnorAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3c67ac1c97cff2befd70fda3365df8fc2e65236")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+147126f77ca8031713658fb3270d08144871253d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConnorAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConnorAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

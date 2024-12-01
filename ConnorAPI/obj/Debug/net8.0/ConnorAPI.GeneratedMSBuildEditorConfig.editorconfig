@@ -18,28 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Connor\Source\Repos\MuiltifuctionAPI\ConnorAPI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Galnet/Guessr.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbmV0XEd1ZXNzci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Galnet/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbmV0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Galnet/ViewContent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbmV0XFZpZXdDb250ZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Guessr/GameOver.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3NyXEdhbWVPdmVyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Guessr/Play.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3NyXFBsYXkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Guessr/RoundSummary.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3NyXFJvdW5kU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Connor/Source/Repos/MuiltifuctionAPI/ConnorAPI/Views/Home/Index.cshtml]
