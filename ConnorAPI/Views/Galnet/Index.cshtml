@@ -19,6 +19,25 @@
             }
         </div>
 
+        <div class="search-container">
+            <form method="get" asp-action="Index">
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="searchTitle" name="searchTitle" value="true" @(ViewData["SearchTitle"] != null && (bool)ViewData["SearchTitle"] ? "checked" : "") />
+                        <label class="form-check-label" for="searchTitle">Search Title</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="searchContent" name="searchContent" value="true" @(ViewData["SearchContent"] != null && (bool)ViewData["SearchContent"] ? "checked" : "") />
+                        <label class="form-check-label" for="searchContent">Search Content</label>
+                    </div>
+                </div>
+
+                <input type="text" name="searchQuery" placeholder="Search Content..." value="@ViewData["SearchQuery"]" class="form-control mb-1" />
+                <button type="submit" class="btn btn-primary">Search</button>
+                <a asp-action="Index" class="btn btn-secondary mb-0">Clear Search</a>
+            </form>
+        </div>
+
         <table class="table table-striped">
             <thead>
                 <tr>

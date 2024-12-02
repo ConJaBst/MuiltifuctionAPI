@@ -23,11 +23,39 @@ namespace ConnorAPI.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Index(string sortOrder, bool loadAll = false)
+        public async Task<IActionResult> Index(string sortOrder, string searchQuery = null, bool searchTitle = false, bool searchContent = false, bool loadAll = false)
         {
             var articles = await _galnetService.LoadArticlesFromJsonAsync();
 
             articles = articles.OrderByDescending(a => a.Id).ToList();
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                if (searchTitle && searchContent)
+                {
+                    articles = articles.Where(a =>
+                            (a.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+                            (a.Content.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+                        ).ToList();
+                }
+                else if (searchTitle && !searchContent)
+                {
+                    articles = articles.Where(a =>
+                            (a.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) 
+                        ).ToList();
+                }
+                else if (!searchTitle && searchContent)
+                {
+                    articles = articles.Where(a =>
+                            (a.Content.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+                        ).ToList();
+                }
+
+                else
+                {
+                    Console.WriteLine("No search criteria selected");
+                }
+            }
 
             if (!loadAll)
             {

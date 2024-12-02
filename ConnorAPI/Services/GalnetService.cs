@@ -14,10 +14,6 @@ namespace ConnorAPI.Services
             _httpClient = new HttpClient();
         }
 
-
-
-
-
         public async Task<List<GalnetArticle>> FetchArticlesUntilLatestAsync()
         {
             var articles = new List<GalnetArticle>();
