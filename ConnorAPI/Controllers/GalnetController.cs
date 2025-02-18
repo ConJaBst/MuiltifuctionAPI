@@ -37,18 +37,23 @@ namespace ConnorAPI.Controllers
                             (a.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
                             (a.Content.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
                         ).ToList();
+                    loadAll = true;
                 }
                 else if (searchTitle && !searchContent)
                 {
                     articles = articles.Where(a =>
                             (a.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) 
                         ).ToList();
+                    loadAll = true;
+
                 }
                 else if (!searchTitle && searchContent)
                 {
                     articles = articles.Where(a =>
                             (a.Content.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
                         ).ToList();
+                    loadAll = true;
+
                 }
 
                 else
